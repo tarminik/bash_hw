@@ -1,4 +1,6 @@
 #! /bin/bash
 
-path=$BACKUP_PATH/`date +%x_%F`backup.tar.gz
-find $HOME -type f -mtime 1 -exec tar -rvf $path {} \;
+find ~/Downloads -mtime -1 > files.txt
+echo "$(tail -n +2 files.txt)" > files.txt
+tar -cf archive.tar.gz -T files.txt
+
