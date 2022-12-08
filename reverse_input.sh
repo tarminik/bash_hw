@@ -1,4 +1,3 @@
 #! /bin/bash
 
-read input
-echo "$input" | rev
+cat reverse_input.sh | rev | tac
