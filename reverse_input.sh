@@ -1,3 +1,4 @@
 #! /bin/bash
 
-cat reverse_input.sh | rev | tac
+me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
+cat $me | rev | tac
