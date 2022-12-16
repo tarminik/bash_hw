@@ -1,4 +1,4 @@
 #! /bin/bash
 
-read input
-echo "$input" | rev
+me="$(basename "$(test -L "$0" && readlink "$0" || echo "$0")")"
+cat $me | rev | tac
