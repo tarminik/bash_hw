@@ -1,6 +1,5 @@
 #! /bin/bash
 
-export ARCHIVE_PATH=/home/tarminik/Desktop
 find ~/Downloads -mtime -1 > files.txt
 echo "$(tail -n +2 files.txt)" > files.txt
 dat=`date +%F`
